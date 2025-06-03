@@ -125,12 +125,12 @@
                             <!-- Home Section -->
                             <div id="home" class="section flex flex-col flex-1 bg-white rounded md:rounded-md lg:rounded-lg p-2 md:p-2 lg:p-3 overflow-y-auto mb-0 md:mb-2 lg:mb-4">
                                 
-                                    <div class="bg-white dark:bg-gray-800 rounded-lg p-2 md:p-2 lg:p-3 mb-1 md:mb-2 lg:mb-3 shadow-md">
+                                    <div class="bg-white dark:bg-gray-800 rounded md:rounded-md lg:rounded-lg pt-1 md:pt-1 lg:pt-2 p-2 md:p-2 lg:p-3 mb-1 md:mb-2 lg:mb-3 shadow-md">
                                             <div class="flex items-center gap-4">
                                                 <div>
                                                     <h2 class="text-sm md:text-base lg:text-lg font-bold mb-1 dark:text-white">Welcome!</h2>
                                                     <p class="text-xs md:text-sm lg:text-sm text-gray-600 dark:text-gray-300" id="inventorySlots"></p>
-                                                    <button id="upgradeBtn" class="mt-1 bg-[#F9D43A] hover:bg-[#F9D43A]/80 text-xs md:text-sm lg:text-sm text-black px-1 md:px-2 lg:px-2 py-1 rounded">Upgrade</button>
+                                                    <button id="upgradeBtn" class="mt-1 bg-[#F9D43A] hover:bg-[#F9D43A]/80 text-xs md:text-sm lg:text-sm text-gray-50 px-1 md:px-2 lg:px-2 py-1 rounded">Upgrade</button>
                                                 </div>
                                                 <video autoplay loop muted playsinline class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-lg">
                                                     <source src="https://www.codency.uno/assets/app-images/cart-animation.webm" type="video/webm">
@@ -176,7 +176,7 @@
                                                     <p class="text-xs md:text-base lg:text-base font-semibold text-gray-500 dark:text-gray-400">Wallet</p>
                                                     <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="balanceDisplay">...</h3>
                                                 </div>
-                                                <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="hidden md:block w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6zm2-2v2h14V4H5zm0 4v10h14V8H5zm4 3h6m-6 3h6"></path>
                                                 </svg>
                                             </div>
@@ -189,7 +189,7 @@
                                                     <p class="text-xs md:text-base lg:text-base font-semibold text-gray-500 dark:text-gray-400">Net Gains</p>
                                                     <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="profitsDisplay">...</h3>
                                                 </div>
-                                                <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="hidden md:block w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path>
                                                 </svg>
                                             </div>
@@ -202,7 +202,7 @@
                                                     <p class="text-xs md:text-base lg:text-base font-semibold text-gray-500 dark:text-gray-400">Sales</p>
                                                     <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="packsSoldDisplay">...</h3>
                                                 </div>
-                                                <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="hidden md:block w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                                                 </svg>
                                             </div>
@@ -218,7 +218,7 @@
                                                     </div>                                                    
                                                      <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="inventoryCountDisplay">...</h3>
                                                 </div>
-                                                <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="hidden md:block w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
                                                 </svg>
                                             </div>
@@ -273,14 +273,14 @@
                                         <div class="w-full sm:w-3/4 lg:w-3/4 bg-transparent p-0 relative">
 
                                             <div class="absolute left-2 bottom-4 z-10">
-                                                <button id="scrollLeft" class="p-2 md:p-2 lg:p-2 bg-[#F9D43A]/60 text-white rounded-full hover:bg-[#F9D43A]/80 active:scale-95 backdrop-blur-sm shadow-lg">
+                                                <button id="scrollLeft" class="p-2 md:p-2 lg:p-2 bg-[#F9D43A]/80 text-white rounded-full hover:bg-[#F9D43A]/90 active:scale-95 backdrop-blur-sm shadow-lg">
                                                     <svg class="w-6 h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                                     </svg>
                                                 </button>
                                             </div>
                                             <div class="absolute right-2 bottom-4 z-10">
-                                                <button id="scrollRight" class="p-2 md:p-2 lg:pb-2 bg-[#F9D43A]/60 text-white rounded-full hover:bg-[#F9D43A]/80 active:scale-95 backdrop-blur-sm shadow-lg">
+                                                <button id="scrollRight" class="p-2 md:p-2 lg:pb-2 bg-[#F9D43A]/80 text-white rounded-full hover:bg-[#F9D43A]/90 active:scale-95 backdrop-blur-sm shadow-lg">
                                                     <svg class="w-6 h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                                     </svg>
@@ -464,83 +464,260 @@
                                             </script>                                        
                                         </div>
 
+                                        <!---Quick Links/ Overview-->
+                                        <div id="right-panel" class="hidden sm:block sm:w-1/3 lg:w-1/3 bg-white p-3 rounded-lg shadow-lg">
+                                        <div id="deposit-content" class="space-y-4">
 
-                                        <div class="hidden sm:block sm:w-1/3 lg:w-1/3 bg-white p-3 rounded-lg shadow-lg">
-                                            <div class="space-y-4">
-                                                <div class="border-b pb-2">
-                                                    <h3 class="text-base font-semibold text-gray-500">Overview</h3>
-                                                    <div class="text-sm text-gray-500 space-y-1 mt-2">
-                                                        <div class="flex justify-between">
-                                                            <span>Total Invested</span>
-                                                            <span class="font-medium">$0.00</span>
-                                                        </div>
-                                                        <div class="flex justify-between">
-                                                            <span>Portfolio Value</span>
-                                                            <span class="font-medium text-green-600">$0.00</span>
-                                                        </div>
-                                                        <div class="flex justify-between">
-                                                            <span>Overall ROI</span>
-                                                            <span class="font-medium text-blue-600">0%</span>
-                                                        </div>
-                                                    </div>
+                                            <!-- Default Overview + Add Funds Panel -->
+                                            <div id="default-section">
+                                            <div class="border-b pb-2">
+                                                <h3 class="text-base font-semibold text-gray-500">Overview</h3>
+                                                <div class="text-sm text-gray-500 space-y-1 mt-2">
+                                                <div class="flex justify-between"><span>Total Invested</span><span class="font-medium">$0.00</span></div>
+                                                <div class="flex justify-between"><span>Portfolio Value</span><span class="font-medium text-green-600">$0.00</span></div>
+                                                <div class="flex justify-between"><span>Overall ROI</span><span class="font-medium text-blue-600">0%</span></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="border-b pb-2">
+                                                <h3 class="text-base font-semibold text-gray-500">Ad Performance</h3>
+                                                <div class="text-sm text-gray-500 space-y-1 mt-2">
+                                                <div class="flex justify-between"><span>Impressions</span><span class="font-medium">0</span></div>
+                                                <div class="flex justify-between"><span>CTR</span><span class="font-medium">0%</span></div>
+                                                <div class="flex justify-between"><span>Ad Spend</span><span class="font-medium">$0.00</span></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex gap-2 mt-3 mb-3">
+                                                <button onclick="startDeposit()" class="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
+                                                <i class="fas fa-wallet mr-1"></i> Add Funds
+                                                </button>
+                                                <button onclick="startCashout()" class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
+                                                <i class="fas fa-exchange-alt mr-1"></i> Cash Out
+                                                </button>
+                                            </div>
+
+                                            <div id="tipContainer" class="text-sm text-gray-600 italic p-2 bg-gray-50 rounded-lg opacity-0 transition-opacity duration-500"></div>
+                                            </div>
+
+                                            <!-- Step 1: Deposit Reason and Method -->
+                                            <div id="method-selection" class="hidden text-center space-y-4">
+                                            <div class="flex justify-center items-center">
+                                                <h3 class="text-base font-semibold text-gray-700 mr-4"><i class="fas fa-credit-card mr-2"></i>Choose Deposit Method</h3>
+                                                <button onclick="cancelDeposit()" class="text-sm text-gray-500 hover:text-red-500 ml-4"><i class="fas fa-times"></i></button>
+                                            </div>
+                                            <p class="text-sm text-gray-500">
+                                                Codency Uno uses gift cards like Apple & Nike as verified value tokens. They're fast, secure, and help us keep deposits smooth and fraud-free.
+                                            </p>
+                                            <div class="flex justify-center gap-6">
+                                                <button onclick="selectMethod('Apple')" class="w-16 h-16 rounded-full bg-gray-100 hover:bg-gray-200"><img src="apple-logo.jpg" alt="Apple" class="w-full h-full object-cover rounded-full"></button>
+                                                <button onclick="selectMethod('Nike')" class="w-16 h-16 rounded-full bg-gray-100 hover:bg-gray-200"><img src="nike-logo.webp" alt="Nike" class="w-full h-full object-cover rounded-full"></button>
+                                            </div>
+                                            </div>
+
+                                            <!-- Cashout Form -->
+                                            <div id="cashout-form" class="hidden space-y-4">
+                                                <div class="flex justify-between items-center">
+                                                    <h3 class="text-base font-semibold text-gray-700"><i class="fas fa-university mr-2"></i>Cash Out</h3>
+                                                    <button onclick="cancelCashout()" class="text-sm text-gray-500 hover:text-red-500"><i class="fas fa-times"></i></button>
                                                 </div>
                                                 
-                                                <div class="border-b pb-2">
-                                                    <h3 class="text-base font-semibold text-gray-500">Ad Performance</h3>
-                                                    <div class="text-sm text-gray-500 space-y-1 mt-2">
-                                                        <div class="flex justify-between">
-                                                            <span>Impressions</span>
-                                                            <span class="font-medium">0</span>
-                                                        </div>
-                                                        <div class="flex justify-between">
-                                                            <span>CTR</span>
-                                                            <span class="font-medium">0%</span>
-                                                        </div>
-                                                        <div class="flex justify-between">
-                                                            <span>Ad Spend</span>
-                                                            <span class="font-medium">$0.00</span>
+                                                <div class="bg-gray-50 p-3 rounded-lg" style="display: none;">
+                                                    <h4 class="text-sm font-medium text-gray-700 mb-2">Bank Details</h4>
+                                                    <div id="bankInfo" class="text-xs text-gray-600 space-y-1">
+                                                        <div><span class="font-medium">Account Name: </span> <span id="accountName"></span></div>
+                                                        <div><span class="font-medium">Account Number: </span> <span id="accountNumber"></span></div>
+                                                        <div><span class="font-medium">Bank Name: </span> <span id="bankName"></span></div>
+                                                    </div>
+                                                </div>
+                                                <script>
+                                                    const bankInfos = localStorage.getItem('bankInfo');
+                                                    if (bankInfos) {
+                                                        const [name, number, bank] = bankInfos.split(',').map(item => item.trim());
+                                                        document.getElementById('accountName').textContent = name;
+                                                        document.getElementById('accountNumber').textContent = number;
+                                                        document.getElementById('bankName').textContent = bank;
+                                                        document.getElementById('bankInfo').style.display = 'block';
+                                                    } else {
+                                                        document.write(`
+                                                            <div class="flex flex-col items-center justify-center py-2">
+                                                                <svg class="w-16 h-16 text-gray-300 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                                                                </svg>
+                                                                <p class="text-gray-500 text-sm">No bank account added yet</p>
+                                                                <button class="flex items-center text-sm text-[#F9D43A] hover:text-text-[#F9D43A]">
+                                                                    <i class="fas fa-plus-circle mr-2"></i>
+                                                                    Add Bank Account
+                                                                </button>
+                                                            </div>
+                                                        `);
+                                                    }
+                                                </script>
+                                                <form id="cashout-amount-form" class="space-y-3">
+                                                    <div class="flex gap-2">
+                                                        <label class="block flex-1">
+                                                            <span class="text-gray-700 text-xs">Amount</span>
+                                                            <input type="number" name="cashoutAmount" class="mt-1 w-full px-2 py-1.5 border rounded-md text-xs" required>
+                                                        </label>
+
+                                                        <label class="block w-24">
+                                                            <span class="text-gray-700 text-xs">Currency</span>
+                                                            <select name="cashoutCurrency" id="currencySelect3" class="mt-1 w-full px-2 py-1.5 border rounded-md text-xs appearance-none" disabled>
+                                                                <option value="1">USD</option>
+                                                                <option value="2">GBP</option>
+                                                                <option value="3">EUR</option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                    <button type="submit" class="w-1/2 mx-auto block bg-[#F9D43A] text-white py-1.5 rounded-md hover:bg-[#F9D43A] transition text-sm disabled:opacity-50 disabled:cursor-not-allowed" disabled>Transfer Funds</button>
+                                                </form>
+                                            </div>
+
+                                            <!-- Step 2: Deposit Form -->
+                                            <form id="deposit-form" class="hidden space-y-3 text-xs">
+                                            <div class="flex flex-col items-center mb-3">
+                                                <div class="w-full relative mb-2">
+                                                    <button onclick="cancelDeposit()" type="button" class="absolute top-0 right-0 text-gray-500 hover:text-red-500">
+                                                        <i class="fas fa-times text-base"></i>
+                                                    </button>
+                                                    <div id="method-image" class="w-full flex justify-center items-center mt-4">
+                                                        <div class="w-48 h-24">
+                                                            <img src="apple-bg.png" alt="Apple" class="w-full h-full object-contain hidden" id="apple-image">
+                                                            <img src="nike-bg.png" alt="Nike" class="w-full h-full object-contain hidden" id="nike-image">
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <h3 id="form-title" class="text-sm font-semibold text-gray-700 text-center">Deposit with Gift Card</h3>
+                                            </div>
 
-                                                <div class="flex gap-2">
-                                                    <button class="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
-                                                        <i class="fas fa-wallet mr-1"></i> Add Funds
-                                                    </button>
-                                                    <button class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
-                                                        <i class="fas fa-exchange-alt mr-1"></i> Cash Out
-                                                    </button>
-                                                </div>
+                                            <label class="block">
+                                                <span class="text-gray-700 text-xs">Card Code</span>
+                                                <input type="text" name="cardCode" class="mt-1 w-full px-2 py-1.5 border rounded-md text-xs" required oninput="this.value = this.value.toUpperCase()" style="text-transform: uppercase;">
+                                            </label>
 
-                                                <div id="tipContainer" class="text-sm text-gray-600 italic p-2 bg-gray-50 rounded-lg opacity-0 transition-opacity duration-500">
-                                                </div>
-                                                <script>
-                                                    const tips = [
-                                                        "💡 Tip: You earn more by holding premium product sets",
-                                                        "📦 Product earnings release after 10–15 working days post-sale",
-                                                        "🎯 Tip: Diversify your portfolio across different categories",
-                                                        "💰 Higher tier products offer better profit margins",
-                                                        "👌 Quick scaling: Reinvest profits into new product sets",
-                                                        "😉 Regular portfolio updates increase earning potential"
-                                                    ];
-                                                    let currentTipIndex = 0;
-                                                    const tipContainer = document.getElementById('tipContainer');
+                                            <div class="flex gap-2">
+                                                
+                                                <label class="block flex-1">
+                                                    <span class="text-gray-700 text-xs">Amount</span>
+                                                    <input type="number" name="amount" class="mt-1 w-full px-2 py-1.5 border rounded-md text-xs" required>
+                                                </label>
 
-                                                    function showNextTip() {
-                                                        tipContainer.style.opacity = '0';
-                                                        setTimeout(() => {
-                                                            tipContainer.textContent = tips[currentTipIndex];
-                                                            tipContainer.style.opacity = '1';
-                                                            currentTipIndex = (currentTipIndex + 1) % tips.length;
-                                                        }, 500);
+                                                <label class="block w-24">
+                                                    <span class="text-gray-700 text-xs">Currency</span>
+                                                    <select name="currency" id="currencySelect2" class="mt-1 w-full px-2 py-1.5 border rounded-md text-xs appearance-none" disabled>
+                                                    <option value="1">USD</option>
+                                                    <option value="2">GBP</option>
+                                                    <option value="3">EUR</option>
+                                                    </select>
+                                                </label>                                                                                                
+                                            </div>
+
+                                            <script>
+                                                document.addEventListener('DOMContentLoaded', function() {
+                                                    const currencySelect = document.getElementById('currencySelect2');
+                                                    const currencySelect3 = document.getElementById('currencySelect3');
+                                                    const savedCurrency = localStorage.getItem('currency');
+                                                    if (savedCurrency) {
+                                                        currencySelect.value = savedCurrency;
+                                                        currencySelect3.value = savedCurrency;
                                                     }
 
-                                                    showNextTip();
-                                                    setInterval(showNextTip, 20000);
-                                                </script>
+                                                    const bankInfo = document.getElementById('bankInfo');
+                                                    const savedBankData = JSON.parse(localStorage.getItem('bankInfo') || '{}');
+                                                    if(savedBankData.bank) {
+                                                        bankInfo.innerHTML = `
+                                                            <p><strong>Bank:</strong> ${savedBankData.bank}</p>
+                                                            <p><strong>Account Name:</strong> ${savedBankData.accountName}</p>
+                                                            <p><strong>Account Number:</strong> ${savedBankData.accountNumber}</p>
+                                                        `;
+                                                    }
+                                                });
+
+                                                function startCashout() {
+                                                    document.getElementById('default-section').style.display = 'none';
+                                                    document.getElementById('cashout-form').style.display = 'block';
+                                                }
+
+                                                function cancelCashout() {
+                                                    document.getElementById('cashout-form').style.display = 'none';
+                                                    document.getElementById('default-section').style.display = 'block';
+                                                }
+                                            </script>
+
+                                            <label class="flex items-center gap-2 mt-2">
+                                                <input type="checkbox" id="physical-toggle" onchange="togglePhysical(this)" class="h-3 w-3 text-blue-600">
+                                                <span class="text-xs">I have a physical card</span>
+                                            </label>
+
+                                            <div id="physical-upload" class="hidden space-y-2 mt-2">
+                                                <label class="block">
+                                                <span class="text-gray-700 text-xs">Upload Card Image</span>
+                                                <input type="file" name="cardImage" accept="image/*" class="mt-1 block w-full text-xs">
+                                                </label>
+                                                <label class="block">
+                                                <span class="text-gray-700 text-xs">Upload Receipt</span>
+                                                <input type="file" name="receiptImage" accept="image/*" class="mt-1 block w-full text-xs">
+                                                </label>
+                                                <p class="text-xs text-gray-500 italic">Uploading a photo helps us verify your card faster.</p>
                                             </div>
+
+                                            <button type="submit" class="w-1/2 mx-auto block bg-[#F9D43A] text-gray-50 py-1.5 rounded-md hover:bg-[#F9D43A]/110 transition text-sm">Submit Deposit</button>                                            
+                                        </form>
                                         </div>
 
+                                        <script>
+                                            const tipContainer = document.getElementById('tipContainer');
+                                            const tips = [
+                                            "💡 Tip: You earn more by holding premium product sets",
+                                            "📦 Product earnings release after 10–15 working days post-sale",
+                                            "🎯 Tip: Diversify your portfolio across different categories",
+                                            "💰 Higher tier products offer better profit margins",
+                                            "👌 Quick scaling: Reinvest profits into new product sets",
+                                            "😉 Regular portfolio updates increase earning potential"
+                                            ];
+                                            let currentTipIndex = 0;
+
+                                            function showNextTip() {
+                                            tipContainer.style.opacity = '0';
+                                            setTimeout(() => {
+                                                tipContainer.textContent = tips[currentTipIndex];
+                                                tipContainer.style.opacity = '1';
+                                                currentTipIndex = (currentTipIndex + 1) % tips.length;
+                                            }, 500);
+                                            }
+                                            showNextTip();
+                                            setInterval(showNextTip, 20000);
+
+                                            // UI Functions
+                                            function startDeposit() {
+                                            document.getElementById('default-section').style.display = 'none';
+                                            document.getElementById('method-selection').style.display = 'block';
+                                            }
+
+                                            function cancelDeposit() {
+                                            document.getElementById('method-selection').style.display = 'none';
+                                            document.getElementById('deposit-form').style.display = 'none';
+                                            document.getElementById('physical-upload').style.display = 'none';
+                                            document.getElementById('default-section').style.display = 'block';
+                                            }
+
+                                            function selectMethod(method) {
+                                            document.getElementById('method-selection').style.display = 'none';
+                                            document.getElementById('form-title').textContent = `Deposit with ${method} Gift Card`;
+                                            document.getElementById('deposit-form').style.display = 'block';
+                                            // Hide all images first
+                                            document.getElementById('apple-image').style.display = 'none';
+                                            document.getElementById('nike-image').style.display = 'none';
+                                            // Show only the selected method's image
+                                            document.getElementById(`${method.toLowerCase()}-image`).style.display = 'block';
+                                            }
+
+                                            function togglePhysical(checkbox) {
+                                            document.getElementById('physical-upload').style.display = checkbox.checked ? 'block' : 'none';
+                                            }
+                                        </script>
+                                        
+                                        </div>
 
                                     </div>                                   
                             </div>
@@ -548,7 +725,7 @@
                             <!-- Inventory Section -->
                             <div id="inventory" class="section hidden overflow-y-auto">
                                 <div class="bg-white dark:bg-gray-800 rounded-lg p-2 md:p-3 lg:p-4 mb-2 md:mb-3 lg:mb-4">
-                                        <div class="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4">
+                                        <div class="flex items-center gap-1 lg:gap-2">
                                             <video autoplay loop muted playsinline class="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-24 lg:h-24 rounded-lg">
                                                 <source src="https://www.codency.uno/assets/app-images/inventory.webm" type="video/webm">
                                             </video>
@@ -725,12 +902,12 @@
                             <!-- Profile Section -->
                             <div id="profile" class="section hidden overflow-y-auto">
                                 
-                                    <div class="bg-white rounded-lg p-2 md:p-3 lg:p-4 mb-2 md:mb-3 lg:mb-4">
+                                    <div class="bg-white rounded-lg p-2 md:p-3 lg:p-4 mb-2 md:mb-2 lg:mb-2">
 
                                         <div class="flex flex-col sm:flex-row justify-between items-start mb-1 sm:mb-1 md:mb-1 lg:mb-1">
-                                            <div class="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4">
+                                            <div class="flex items-center gap-1 lg:gap-2">
                                                 <video class="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-24 lg:h-24 rounded-full" autoplay loop muted playsinline>
-                                                    <source src="https://www.codency.uno/assets/app-images/welcome.webm" type="video/webm">
+                                                    <source src="https://www.codency.uno/assets/app-images/user1.webm" type="video/webm">
                                                 </video>
                                                      <h2 class="text-base md:text-lg lg:text-xl font-bold text-gray-800">Your Profile</h2>
                                             </div>
@@ -744,19 +921,21 @@
                                                     <h3 class="text-sm md:text-base lg:text-base font-semibold text-gray-700 mb-2 md:mb-3 lg:mb-4">Personal Information</h3>
                                                     <div class="space-y-3 md:space-y-4 lg:space-y-5">
                                                         <div class="flex items-center">
-                                                            <i class="fas fa-user text-gray-400 w-6 md:w-8 lg:w-8"></i>
+                                                            <i class="fas fa-user-circle text-gray-400 w-6 md:w-8 lg:w-8"></i>
                                                             <span class="text-xs text-gray-600 md:text-sm lg:text-base"><script>document.write(localStorage.getItem('userName') || 'Name')</script></span>
                                                         </div>
                                                         <div class="flex items-center">
-                                                            <i class="fas fa-envelope text-gray-400 w-6 md:w-8 lg:w-8"></i>
+                                                            <i class="fas fa-envelope-open-text text-gray-400 w-6 md:w-8 lg:w-8"></i>
                                                             <span class="text-xs text-gray-600 md:text-base lg:text-base"><script>document.write(localStorage.getItem('email') || 'Email')</script></span>
                                                         </div>
                                                         <div class="flex items-center">
-                                                            <i class="fas fa-globe text-gray-400 w-6 md:w-8 lg:w-8"></i>
+                                                            <i class="fas fa-globe-americas text-gray-400 w-6 md:w-8 lg:w-8"></i>
                                                             <span class="text-gray-600 text-xs md:text-base lg:text-base"><script>document.write(localStorage.getItem('country') || 'Country')</script></span>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                
                                                 <!--KYC information-->
                                                 <div class="bg-white p-2 md:p-3 lg:p-4 rounded md:rounded-md lg:rounded-lg shadow-md mt-2 !mt-2 md:!mt-4 lg:!mt-6">
                                                     <div class="flex items-center justify-between mb-4">
@@ -770,6 +949,18 @@
                                                             `);
                                                         </script>
                                                     </div>
+                                                    <div class="w-full bg-gray-200 h-2 rounded-full mt-2">
+                                                        <script>
+                                                            document.write(`
+                                                                <div class="w-[${kycStatus === 'verified' ? '100' : '0'}%] bg-yellow-400 h-2 rounded-full"></div>
+                                                            `);
+                                                        </script>
+                                                    </div>
+                                                    <p class="text-xs text-gray-500 mt-1 mb-2">
+                                                        <script>
+                                                            document.write(`${kycStatus === 'verified' ? '100' : '0'}% profile complete`);
+                                                        </script>
+                                                    </p>
                                                     <div class="space-y-3">
                                                         <div class="flex items-center">
                                                             <i class="fas fa-id-card text-gray-400 w-6"></i>
@@ -814,6 +1005,7 @@
                                                         </script>
                                                     </div>
                                                 </div>
+                                                
                                             </div>
 
                                             <div class="space-y-4">
@@ -853,15 +1045,22 @@
                                                                 `);
                                                             } else {
                                                                 document.write(`
-                                                                    <button class="flex items-center text-xs md:text-base lg:text-base text-blue-600 hover:text-blue-700 text-sm mt-2">
-                                                                        <i class="fas fa-plus-circle mr-2"></i>
-                                                                        Add Bank Account
-                                                                    </button>
+                                                                    <div class="flex flex-col items-center justify-center py-2 md:py-4 lg:py-6">
+                                                                        <svg class="w-16 h-16 text-gray-300 mb-2 lg:mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                                                                        </svg>
+                                                                        <p class="text-gray-500 text-xs md:text-sm lg:text-base mb-4">No bank account added yet</p>
+                                                                        <button class="flex items-center text-xs md:text-sm lg:text-base text-[#F9D43A] hover:text-text-[#F9D43A]">
+                                                                            <i class="fas fa-plus-circle mr-2"></i>
+                                                                            Add Bank Account
+                                                                        </button>
+                                                                    </div>
                                                                 `);
                                                             }
                                                         </script>
                                                     </div>
                                                 </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -872,7 +1071,7 @@
 
                              <!-- Floating Toggle Button (NOT inside dock) -->
                                 <button id="toggleDock"
-                                    class="fixed bottom-[1%] right-6 bg-blue-600 text-white px-4 py-1 text-sm rounded-full shadow-lg flex items-center gap-2 hover:bg-blue-700 z-50 block md:hidden">
+                                    class="fixed bottom-[1%] right-6 bg-[#F9D43A] text-sm text-gray-50 px-4 py-1 text-sm rounded-full shadow-lg flex items-center gap-2 hover:bg-[#F9D43A] z-50 block md:hidden">
                                     <i id="arrowIcon" class="fas fa-chevron-up"></i>
                                     Open Panel
                                 </button>
@@ -1068,6 +1267,48 @@
                                                 tierInterval = setInterval(updateTier, 2000);
                                             });
                             </script>
+
+                            <script>
+                                (async () => {
+                                    const params = new URLSearchParams(window.location.search);
+                                    const tokenFromURL = params.get("token");
+
+                                    if (tokenFromURL) {
+                                    // Save new login token from magic link
+                                    localStorage.setItem("loginToken", tokenFromURL);
+
+                                    // Optional: Clean the URL to remove token query
+                                    window.history.replaceState({}, document.title, "/");
+                                    }
+
+                                    // Get token (either just saved or from previous session)
+                                    const loginToken = localStorage.getItem("loginToken");
+
+                                    if (!loginToken) {
+                                    // No token in URL or localStorage = not logged in
+                                    window.location.href = "https://www.codency.uno/login"; // or show login UI
+                                    return;
+                                    }
+
+                                    // Optional: decode token to get email/userId
+                                    try {
+                                    const payload = JSON.parse(atob(loginToken.split('.')[1]));
+                                    const email = payload.email;
+                                    const userId = payload.userId;
+
+                                    console.log("✅ Welcome", email);
+
+                                    // You can now fetch user data or show dashboard
+
+                                    } catch (e) {
+                                    console.error("⛔ Invalid token format");
+                                    localStorage.clear();
+                                    localStorage.removeItem("loginToken");
+                                    window.location.href = "https://www.codency.uno/login";                                    }
+                                })();
+                                </script>
+
+
         </div>
     </body>
 </html>
