@@ -9,20 +9,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <script src="https://cdn.tailwindcss.com"></script>        <style>
+        <script src="https://cdn.tailwindcss.com"></script>        
+        <style>
         html, body {
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
             height: 100%;
+            margin: 0;
         }
         </style>
     </head>
 
     <body class="font-['Montserrat'] min-h-screen bg-[#FAFAF5] dark:bg-gray-900">
-        <div class="flex min-h-screen">
+
+        <div class="flex h-screen overflow-hidden bg-transparent">
                         <!-- Sidebar -->
-                        <div class="w-15 md:w-15 lg:w-40 bg-white dark:bg-gray-800 shadow-lg rounded md:rounded-lg lg:rounded-xl ml-2 mt-2 mb-2 md:ml-4 md:mt-4 md:mb-4 lg:ml-6 lg:mt-4 lg:mb-6">
+                        <div class="w-15 md:w-15 lg:w-40 bg-white dark:bg-gray-800 shadow-lg rounded md:rounded-lg lg:rounded-xl ml-2 mt-2 mb-2 md:ml-4 md:mt-4 md:mb-4 lg:ml-6 lg:mt-4 lg:mb-6 overflow-hidden" >
                             <div class="p-4 hidden lg:flex justify-center items-center">
                                 <img src="https://www.codency.uno/assets/app-images/logo-colored.png" alt="Codency Logo" class="w-24 mb-4 rounded-full">
                             </div>        
@@ -37,16 +37,16 @@
                             <svg class="w-6 h-6 lg:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
                             </svg>
-                            <span class="hidden lg:inline text-sm">Inventory</span>
+                            <span class="hidden lg:inline text-sm">Portfolio</span>
                         </a>
 
                         <a href="#notifications" class="nav-link flex items-center justify-start p-4 mx-2 rounded-full text-gray-700 dark:text-gray-200">
                             <svg class="w-6 h-6 lg:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
-                            <span class="hidden lg:inline text-sm">Notify</span>
-                        </a>
-
+                            <span class="hidden lg:inline text-sm">Inbox</span>
+                        </a>                        
+                        
                         <a href="#marketing" class="nav-link flex items-center justify-start p-4 mx-2 rounded-full text-gray-700 dark:text-gray-200">
                             <svg class="w-6 h-6 lg:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
@@ -123,8 +123,9 @@
                         <div class="flex-1 flex flex-col p-2 md:p-4 lg:p-4">
 
                             <!-- Home Section -->
-                            <div id="home" class="section flex flex-col flex-1">
-                                    <div class="bg-white dark:bg-gray-800 rounded-lg p-2 md:p-2 lg:p-3 mb-1 md:mb-2 lg:mb-3 shadow-lg">
+                            <div id="home" class="section flex flex-col flex-1 bg-white rounded md:rounded-md lg:rounded-lg p-2 md:p-2 lg:p-3 overflow-y-auto mb-0 md:mb-2 lg:mb-4">
+                                
+                                    <div class="bg-white dark:bg-gray-800 rounded-lg p-2 md:p-2 lg:p-3 mb-1 md:mb-2 lg:mb-3 shadow-md">
                                             <div class="flex items-center gap-4">
                                                 <div>
                                                     <h2 class="text-sm md:text-base lg:text-lg font-bold mb-1 dark:text-white">Welcome!</h2>
@@ -168,23 +169,25 @@
                                     <!-- Stats Cards -->
                                     <div class="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 gap-1 md:gap-2 lg:gap-3">
                                         <!-- Balance Card -->
-                                        <div class="bg-white dark:bg-gray-800 rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-lg">
+                                         
+                                        <div class="bg-white dark:bg-gray-800 rounded md:rounded-md lg:rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-md">
                                             <div class="flex items-center justify-between">
                                                 <div>
-                                                    <p class="text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Balance</p>
-                                                    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold dark:text-white" id="balanceDisplay">...</h3>
+                                                    <p class="text-xs md:text-base lg:text-base font-semibold text-gray-500 dark:text-gray-400">Wallet</p>
+                                                    <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="balanceDisplay">...</h3>
                                                 </div>
                                                 <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6zm2-2v2h14V4H5zm0 4v10h14V8H5zm4 3h6m-6 3h6"></path>
                                                 </svg>
                                             </div>
-                                        </div>                                    
+                                        </div>
+
                                         <!-- Total Profits Card -->
-                                        <div class="bg-white dark:bg-gray-800 rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-lg">
+                                        <div class="bg-white dark:bg-gray-800 rounded md:rounded-md lg:rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-md">
                                             <div class="flex items-center justify-between">
                                                 <div>
-                                                    <p class="text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Profits</p>
-                                                    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold dark:text-white" id="profitsDisplay">...</h3>
+                                                    <p class="text-xs md:text-base lg:text-base font-semibold text-gray-500 dark:text-gray-400">Net Gains</p>
+                                                    <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="profitsDisplay">...</h3>
                                                 </div>
                                                 <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path>
@@ -193,11 +196,11 @@
                                         </div>
                                     
                                         <!-- Packs Sold Card -->
-                                        <div class="bg-white dark:bg-gray-800 rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-lg">
+                                        <div class="bg-white dark:bg-gray-800 rounded md:rounded-md lg:rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-md">
                                             <div class="flex items-center justify-between">
                                                 <div>
-                                                    <p class="text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Sales</p>
-                                                    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold dark:text-white" id="packsSoldDisplay">...</h3>
+                                                    <p class="text-xs md:text-base lg:text-base font-semibold text-gray-500 dark:text-gray-400">Sales</p>
+                                                    <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="packsSoldDisplay">...</h3>
                                                 </div>
                                                 <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
@@ -207,17 +210,20 @@
 
                                     
                                         <!-- Inventory Count Card -->
-                                        <div class="bg-white dark:bg-gray-800 rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-lg">
+                                        <div class="bg-white dark:bg-gray-800 rounded md:rounded-md lg:rounded-lg p-2 pl-2 md:pl-2 lg:pl-3 shadow-md">
                                             <div class="flex items-center justify-between">
                                                 <div>
-                                                    <p class="text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Inventory</p>
-                                                    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold dark:text-white" id="inventoryCountDisplay">...</h3>
+                                                    <div>
+                                                        <h3 class="text-xs md:text-sm lg:text-base font-semibold text-gray-500 dark:text-gray-400"><span class="md:hidden">Inventory</span><span class="hidden md:inline">Inventory Slots</span></h3>
+                                                    </div>                                                    
+                                                     <h3 class="text-lg md:text-2xl lg:text-3xl font-bold dark:text-white" id="inventoryCountDisplay">...</h3>
                                                 </div>
                                                 <svg class="w-8 h-8 text-[#F9D43A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
                                                 </svg>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                     
                                     <script>
@@ -229,6 +235,10 @@
                                             const currency = localStorage.getItem('currency') || '1';
                                             const tier = localStorage.getItem('tier') || '1';
                                     
+                                            function formatNumber(num) {
+                                                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                            }
+
                                             const currencySymbols = {
                                                 '1': '$',
                                                 '2': '£',
@@ -246,32 +256,32 @@
                                             const symbol = currencySymbols[currency];
                                             const slots = tierSlots[tier];
                                     
-                                            document.getElementById('balanceDisplay').textContent = `${symbol}${balance}`;
-                                            document.getElementById('profitsDisplay').textContent = `${symbol}${tProfits}`;
-                                            document.getElementById('packsSoldDisplay').textContent = pSold;
-                                            document.getElementById('inventoryCountDisplay').textContent = `${iCount}/${slots}`;
+                                            document.getElementById('balanceDisplay').textContent = `${symbol}${formatNumber(balance)}`;
+                                            document.getElementById('profitsDisplay').textContent = `${symbol}${formatNumber(tProfits)}`;
+                                            document.getElementById('packsSoldDisplay').textContent = formatNumber(pSold);
+                                            document.getElementById('inventoryCountDisplay').textContent = `${formatNumber(iCount)}/${slots}`;
                                         }
                                     
                                         document.addEventListener('DOMContentLoaded', () => {
                                             updateStats();
                                             setInterval(updateStats, 2000);
                                         });
-                                    </script>
-                                    
+                                    </script>  
+
                                     <div class="flex gap-4 pt-4">
                                         <!--Product Cards Display-->
                                         <div class="w-full sm:w-3/4 lg:w-3/4 bg-transparent p-0 relative">
 
                                             <div class="absolute left-2 bottom-4 z-10">
-                                                <button id="scrollLeft" class="p-2 md:p-2 lg:p-3 bg-[#F9D43A]/60 text-white rounded-full hover:bg-[#F9D43A]/80 active:scale-95 backdrop-blur-sm shadow-lg">
-                                                    <svg class="w-6 h-6 md:w-6 md:h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <button id="scrollLeft" class="p-2 md:p-2 lg:p-2 bg-[#F9D43A]/60 text-white rounded-full hover:bg-[#F9D43A]/80 active:scale-95 backdrop-blur-sm shadow-lg">
+                                                    <svg class="w-6 h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                                     </svg>
                                                 </button>
                                             </div>
                                             <div class="absolute right-2 bottom-4 z-10">
-                                                <button id="scrollRight" class="p-2 md:p-2 lg:p-3 bg-[#F9D43A]/60 text-white rounded-full hover:bg-[#F9D43A]/80 active:scale-95 backdrop-blur-sm shadow-lg">
-                                                    <svg class="w-6 h-6 md:w-6 md:h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <button id="scrollRight" class="p-2 md:p-2 lg:pb-2 bg-[#F9D43A]/60 text-white rounded-full hover:bg-[#F9D43A]/80 active:scale-95 backdrop-blur-sm shadow-lg">
+                                                    <svg class="w-6 h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                                                     </svg>
                                                 </button>
@@ -379,10 +389,10 @@
                                                         div.className = 'product-card bg-white p-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl';
                                                         div.innerHTML = `
                                                             <div class="flex justify-center mb-0">
-                                                                <img src="https://www.codency.uno/assets/app-product-images/${product.setName}.jpg" class="w-38 h-24 object-fit" alt="${product.setName}">
+                                                                <img src="https://www.codency.uno/assets/app-product-images/${product.setName}.jpg" class="h-40 object-contain" alt="${product.setName}">
                                                             </div>
                                                             <div class="flex justify-between items-center mb-2">
-                                                                <h3 class="font-semibold text-xs text-gray-500 dark:text-gray-400">${product.setName}</h3>
+                                                                <h3 class="font-semibold text-xs text-gray-500 dark:text-gray-400">${product.setName.length > 18 ? product.setName.substring(0, 18) + '...' : product.setName}</h3>
                                                                 <span class="text-lg">${tierInfo.icon}</span>
                                                             </div>
                                                             <div class="space-y-1.5 text-sm sm:text-base">
@@ -392,22 +402,24 @@
                                                                  <span class="text-sm text-gray-600">${product.units} units</span>
                                                             </div>
 
-                                                            <div class="flex items-center gap-2">
-                                                                <span class="text-sm text-gray-600">CP: <span class="font-medium">${currencySymbol}${convertCurrency(product.costPerUnit).toFixed(2)}</span></span>
-                                                                <div class="flex-1 border-t border-gray-200 mx-2"></div>
-                                                                <span class="text-sm text-gray-600">SP: <span class="font-medium">${currencySymbol}${convertCurrency(product.sellPrice).toFixed(2)}</span></span>
-                                                             </div>
+                                                             <div class="flex items-center gap-1">
+                                                                 <span class="text-xs text-gray-600">Cost Price: </span>
+                                                                 <div class="flex-1 border-t border-gray-200 mx-2"></div>
+                                                                 <span class="font-medium text-sm">${currencySymbol}${convertCurrency(product.costPerUnit).toFixed(2)}</span>
+                                                              </div>
 
-                                                             <div class="flex items-center gap-2">
-                                                                <span class="text-sm text-gray-600">P: <span class="font-medium text-blue-600">${currencySymbol}${convertCurrency(product.sellPrice - product.costPerUnit).toFixed(2)}</span></span>
-                                                                    <div class="flex-1 border-t border-gray-200 mx-2"></div>
-                                                                <span class="text-sm text-gray-600">ROI: <span class="font-medium text-blue-600">${((product.sellPrice - product.costPerUnit) / product.costPerUnit * 100).toFixed(2)}%</span></span>
-                                                            </div>
+                                                              <div class="flex items-center gap-1">
+                                                                 <span class="text-sm text-gray-600">S.P: </span>
+                                                                 <span class="font-medium text-sm">${currencySymbol}${convertCurrency(product.sellPrice).toFixed(2)}</span>
+                                                                 <div class="flex-1 border-t border-gray-200 mx-2"></div>
+                                                                 <span class="text-sm text-gray-600 ml-2">ROI:</span>
+                                                                 <span class="font-medium text-sm text-blue-600">${((product.sellPrice - product.costPerUnit) / product.costPerUnit * 100).toFixed(1)}%</span>
+                                                              </div>
                                                                 <div class="flex items-center gap-2">
-                                                                    <span class="text-sm text-gray-600">Earn: <span class="font-medium text-green-600">${currencySymbol}${convertCurrency((product.sellPrice - product.costPerUnit) * product.units * 0.6).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</span></span>
+                                                                    <span class="text-sm text-gray-600">Revenue Share: <span class="font-medium text-green-600">${currencySymbol}${convertCurrency((product.sellPrice - product.costPerUnit) * product.units * 0.6).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span></span>
                                                                 </div>                                                            
                                                             </div>
-                                                            <div class="flex justify-center">
+                                                            <div class="flex justify-center mt-2">
                                                                 <button 
                                                                     class="w-12 h-12 rounded-full text-sm sm:text-base transition-all duration-300 ${
                                                                         isUnlocked
@@ -418,7 +430,7 @@
                                                                         >
                                                                     <i class="fas fa-${isUnlocked ? 'plus' : 'lock'} text-lg"></i>
                                                                     <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap transition-all duration-300 slide-label" style="opacity: 0; transform: translateY(0);">
-                                                                        ${['AliExpress', 'DHgate', 'Gearbest', 'Tomtop', 'Banggood', 'LightInTheBox', 'PandaBuy', 'Alibaba', 'Made-in-China.com', 'Chinabrands', 'TechLiquidators', 'BackMarket', 'Refurb.io', 'PlugTech', 'Mac of All Trades', 'Reboxed', 'Gazelle Bulk', 'WeSellTek', 'CExchange', 'Wholesale Ninjas', 'Direct Liquidation', 'Quicklotz', 'B-Stock', 'GENCO Marketplace', 'Bulq.com', 'BlueLots', 'BoxFox', 'Via Trading', 'PalletFly', 'Spocket', 'Oberlo', 'Modalyst', 'Printful', 'Dropified', 'Importify', 'Wholesale2B', 'CJ Dropshipping', 'Sellvia', 'Tophatter Wholesale'][Math.floor(Math.random() * 40)]}
+                                                                        ${['AliExpress', 'DHgate', 'Gearbest', 'Tomtop', 'Banggood', 'LightInTheBox', 'PandaBuy', 'Alibaba',  'Chinabrands', 'TechLiquidators', 'BackMarket', 'Refurb.io', 'PlugTech', 'Mac of All Trades', 'Reboxed', 'Gazelle Bulk', 'WeSellTek', 'CExchange', 'Wholesale Ninjas', 'Direct Liquidation', 'Quicklotz', 'B-Stock', 'GENCO Marketplace', 'Bulq.com', 'BlueLots', 'BoxFox', 'Via Trading', 'PalletFly', 'Spocket', 'Oberlo', 'Modalyst', 'Printful', 'Dropified', 'Importify', 'Wholesale2B', 'CJ Dropshipping', 'Sellvia', 'Tophatter Wholesale'][Math.floor(Math.random() * 38)]}
                                                                     </div>                                                                
                                                                 </button>
                                                                 <style>
@@ -453,47 +465,94 @@
                                         </div>
 
 
+                                        <div class="hidden sm:block sm:w-1/3 lg:w-1/3 bg-white p-3 rounded-lg shadow-lg">
+                                            <div class="space-y-4">
+                                                <div class="border-b pb-2">
+                                                    <h3 class="text-base font-semibold text-gray-500">Overview</h3>
+                                                    <div class="text-sm text-gray-500 space-y-1 mt-2">
+                                                        <div class="flex justify-between">
+                                                            <span>Total Invested</span>
+                                                            <span class="font-medium">$0.00</span>
+                                                        </div>
+                                                        <div class="flex justify-between">
+                                                            <span>Portfolio Value</span>
+                                                            <span class="font-medium text-green-600">$0.00</span>
+                                                        </div>
+                                                        <div class="flex justify-between">
+                                                            <span>Overall ROI</span>
+                                                            <span class="font-medium text-blue-600">0%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="border-b pb-2">
+                                                    <h3 class="text-base font-semibold text-gray-500">Ad Performance</h3>
+                                                    <div class="text-sm text-gray-500 space-y-1 mt-2">
+                                                        <div class="flex justify-between">
+                                                            <span>Impressions</span>
+                                                            <span class="font-medium">0</span>
+                                                        </div>
+                                                        <div class="flex justify-between">
+                                                            <span>CTR</span>
+                                                            <span class="font-medium">0%</span>
+                                                        </div>
+                                                        <div class="flex justify-between">
+                                                            <span>Ad Spend</span>
+                                                            <span class="font-medium">$0.00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                        <div class="hidden sm:block sm:w-1/3 lg:w-1/3 bg-white p-3 rounded-lg shadow-lg text-gray-500 dark:text-gray-400">
-                                            Notifications
-                                        </div>
-                                    </div>
-                                    <!--Quick Links-->
-                                    <div class="flex gap-4 pt-4 mb-1 md:mb-2.5 lg:mb-2.5">
-                                        <div class="w-full bg-white p-2 sm:p-3 md:p-4 lg:p-4 rounded-lg shadow-lg">
-                                            <div class="flex items-center justify-between">
-                                                <div class="flex items-center gap-2">
-                                                    <i class="fas fa-plus-circle text-green-500 text-lg sm:text-base md:text-lg lg:text-lg"></i>
-                                                    <span class="hidden sm:block text-xs sm:text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Add Money</span>
+                                                <div class="flex gap-2">
+                                                    <button class="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
+                                                        <i class="fas fa-wallet mr-1"></i> Add Funds
+                                                    </button>
+                                                    <button class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
+                                                        <i class="fas fa-exchange-alt mr-1"></i> Cash Out
+                                                    </button>
                                                 </div>
-                                                <div class="h-6 w-px bg-gray-300"></div>
-                                                <div class="flex items-center gap-2">
-                                                    <i class="fas fa-minus-circle text-red-500 text-lg sm:text-base md:text-lg lg:text-lg"></i>
-                                                    <span class="hidden sm:block text-xs sm:text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Withdraw</span>
+
+                                                <div id="tipContainer" class="text-sm text-gray-600 italic p-2 bg-gray-50 rounded-lg opacity-0 transition-opacity duration-500">
                                                 </div>
-                                                <div class="h-6 w-px bg-gray-300"></div>
-                                                <div class="flex items-center gap-2">
-                                                    <i class="fas fa-bank text-blue-500 text-lg sm:text-base md:text-lg lg:text-lg"></i>
-                                                    <span class="hidden sm:block text-xs sm:text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Connect Account</span>
-                                                </div>
-                                                <div class="h-6 w-px bg-gray-300"></div>
-                                                <div class="flex items-center gap-2">
-                                                    <i class="fas fa-box text-purple-500 text-lg sm:text-base md:text-lg lg:text-lg"></i>
-                                                    <span class="hidden sm:block text-xs sm:text-sm md:text-base lg:text-base text-gray-500 dark:text-gray-400">Manage Inventory</span>
-                                                </div>
+                                                <script>
+                                                    const tips = [
+                                                        "💡 Tip: You earn more by holding premium product sets",
+                                                        "📦 Product earnings release after 10–15 working days post-sale",
+                                                        "🎯 Tip: Diversify your portfolio across different categories",
+                                                        "💰 Higher tier products offer better profit margins",
+                                                        "👌 Quick scaling: Reinvest profits into new product sets",
+                                                        "😉 Regular portfolio updates increase earning potential"
+                                                    ];
+                                                    let currentTipIndex = 0;
+                                                    const tipContainer = document.getElementById('tipContainer');
+
+                                                    function showNextTip() {
+                                                        tipContainer.style.opacity = '0';
+                                                        setTimeout(() => {
+                                                            tipContainer.textContent = tips[currentTipIndex];
+                                                            tipContainer.style.opacity = '1';
+                                                            currentTipIndex = (currentTipIndex + 1) % tips.length;
+                                                        }, 500);
+                                                    }
+
+                                                    showNextTip();
+                                                    setInterval(showNextTip, 20000);
+                                                </script>
                                             </div>
                                         </div>
-                                    </div>                                    
+
+
+                                    </div>                                   
                             </div>
                             
                             <!-- Inventory Section -->
-                            <div id="inventory" class="section hidden">
+                            <div id="inventory" class="section hidden overflow-y-auto">
                                 <div class="bg-white dark:bg-gray-800 rounded-lg p-2 md:p-3 lg:p-4 mb-2 md:mb-3 lg:mb-4">
                                         <div class="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4">
                                             <video autoplay loop muted playsinline class="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-24 lg:h-24 rounded-lg">
                                                 <source src="https://www.codency.uno/assets/app-images/inventory.webm" type="video/webm">
                                             </video>
-                                            <h2 class="text-base md:text-lg lg:text-xl font-bold dark:text-white">Your Investment</h2>
+                                            <h2 class="text-base md:text-lg lg:text-xl font-bold dark:text-white">My Portfolio</h2>
                                         </div>
                                 
                                                         <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-1 md:gap-2 lg:gap-3">
@@ -503,7 +562,7 @@
                                                                     <h3 class="text-xs md:text-sm lg:text-base font-semibold text-gray-700"><span class="md:hidden">Packs</span><span class="hidden md:inline">Total Products</span></h3>                                                                    <i class="fas fa-boxes text-blue-500 text-base md:text-lg lg:text-xl"></i>
                                                                 </div>
                                                                 <p class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800">0</p>
-                                                                <p class="hidden md:block text-xs md:text-sm lg:text-base text-gray-500 mt-2">Items in stock</p>                                                            
+                                                                <p class="hidden md:block text-xs md:text-sm lg:text-base text-gray-500 mt-2">Products in Inventory</p>                                                            
                                                             </div>
 
                                                             <!-- Estimated Profit Card -->
@@ -546,9 +605,9 @@
                                                                         <tr class="hidden lg:table-row">
                                                                             <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Product</th>
                                                                             <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Units</th>
-                                                                            <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">ROI</th>
-                                                                            <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Profit</th>
-                                                                            <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Status</th> 
+                                                                            <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Expected ROI</th>
+                                                                            <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Projected Gains</th>
+                                                                            <th class="px-2 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Order Status</th> 
                                                                         </tr>
 
                                                                         <tr class="hidden md:table-row lg:hidden">
@@ -632,7 +691,7 @@
                                                         <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                                                             <button class="flex items-center justify-center gap-2 bg-blue-50 p-3 rounded-lg hover:bg-blue-100 transition-colors">
                                                                 <i class="fas fa-plus text-blue-500 text-sm md:text-base lg:text-lg"></i>
-                                                                <span class="text-xs md:text-sm lg:text-base text-blue-700">Add Item</span>
+                                                                <span class="text-xs md:text-sm lg:text-base text-blue-700">Add Product Set</span>
                                                             </button>
                                                             <button class="flex items-center justify-center gap-2 bg-green-50 p-3 rounded-lg hover:bg-green-100 transition-colors">
                                                                 <i class="fas fa-file-export text-green-500 text-sm md:text-base lg:text-lg"></i>
@@ -664,7 +723,7 @@
 
 
                             <!-- Profile Section -->
-                            <div id="profile" class="section hidden">
+                            <div id="profile" class="section hidden overflow-y-auto">
                                 
                                     <div class="bg-white rounded-lg p-2 md:p-3 lg:p-4 mb-2 md:mb-3 lg:mb-4">
 
@@ -681,7 +740,7 @@
 
                                             <div class="space-y-4">
                                                 <!--Personal information-->
-                                                <div class="bg-gray-50 p-2 md:p-3 lg:p-4 rounded-lg">
+                                                <div class="bg-white p-2 md:p-3 lg:p-4 shadow-md rounded md:rounded-md lg:rounded-lg">
                                                     <h3 class="text-sm md:text-base lg:text-base font-semibold text-gray-700 mb-2 md:mb-3 lg:mb-4">Personal Information</h3>
                                                     <div class="space-y-3 md:space-y-4 lg:space-y-5">
                                                         <div class="flex items-center">
@@ -699,9 +758,9 @@
                                                     </div>
                                                 </div>
                                                 <!--KYC information-->
-                                                <div class="bg-gray-50 p-2 md:p-3 lg:p-4 rounded-lg mt-2 !mt-2 md:!mt-4 lg:!mt-6">
+                                                <div class="bg-white p-2 md:p-3 lg:p-4 rounded md:rounded-md lg:rounded-lg shadow-md mt-2 !mt-2 md:!mt-4 lg:!mt-6">
                                                     <div class="flex items-center justify-between mb-4">
-                                                        <h3 class="text-sm md:text-base lg:text-base font-semibold text-gray-700">KYC Status</h3>
+                                                        <h3 class="text-sm md:text-base lg:text-base font-semibold text-gray-700">Identity Unlock</h3>
                                                         <script>
                                                             const kycStatus = localStorage.getItem('kycStatus') || 'unverified';
                                                             document.write(`
@@ -759,15 +818,15 @@
 
                                             <div class="space-y-4">
                                                 <!--Connected Accounts-->
-                                                <div class="bg-gray-50 p-2 md:p-3 lg:p-4 rounded-lg">
-                                                    <h3 class="text-sm md:text-base lg:text-base font-semibold text-gray-700 mb-2">Payout Account</h3>
+                                                <div class="bg-white p-2 md:p-3 lg:p-4 rounded md:rounded-md lg:rounded-lg shadow-md">
+                                                    <h3 class="text-sm md:text-base lg:text-base font-semibold text-gray-700 mb-2">Withdrawal Account</h3>
                                                     <div class="space-y-3">
                                                         <div class="flex items-center justify-between">
                                                             <div class="flex items-center">
                                                                 <i class="fas fa-university text-gray-400 mr-2"></i>
                                                                 <div class="flex flex-col">
                                                                     <span class="text-xs md:text-base lg:text-base text-gray-600">Bank Wire</span>
-                                                                    <span class="text-xs md:text-sm lg:text-sm text-gray-500">Bi-weekly payouts (Fridays)</span>
+                                                                    <span class="text-xs md:text-sm lg:text-sm text-gray-500">Bi-weekly transfers (Fridays)</span>
                                                                 </div>
                                                             </div>
                                                             <span class="text-xs md:text-base lg:text-base text-green-600 text-sm" style="display: none" id="connectedStatus">Connected</span>
@@ -779,8 +838,8 @@
                                                                 connectedStatus.style.display = 'inline';
                                                                 const [name, account, bank, type] = bankInfo.split(',');
                                                                 document.write(`
-                                                                    <div class="mt-3 p-3 bg-white rounded-lg border border-gray-200">
-                                                                        <div class="grid grid-cols-2 gap-2 text-sm">
+                                                                    <div class="mt-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
+                                                                        <div class="grid grid-cols-2 gap-2 text-xs md:text-base lg:text-base">
                                                                             <div class="text-xs md:text-base lg:text-base text-gray-500">Account Holder:</div>
                                                                             <div class="text-xs md:text-base lg:text-base text-gray-700 font-medium">${name}</div>
                                                                             <div class="text-xs md:text-base lg:text-base text-gray-500">Account Number:</div>
@@ -809,7 +868,127 @@
                             </div>
 
                         </div>
+                        
 
+                             <!-- Floating Toggle Button (NOT inside dock) -->
+                                <button id="toggleDock"
+                                    class="fixed bottom-[1%] right-6 bg-blue-600 text-white px-4 py-1 text-sm rounded-full shadow-lg flex items-center gap-2 hover:bg-blue-700 z-50 block md:hidden">
+                                    <i id="arrowIcon" class="fas fa-chevron-up"></i>
+                                    Open Panel
+                                </button>
+
+
+                                <!-- 🔲 Overlay (initially hidden) -->
+                                <div id="overlay"
+                                class="fixed inset-0 bg-black bg-opacity-60 z-30 transition-opacity duration-300 opacity-0 pointer-events-none">
+                                </div>
+
+
+                                <!-- ✅ Bottom Dock (Hidden by default) -->
+                                <div id="dock"
+                                    class="fixed bottom-0 left-0 w-full bg-white shadow-lg z-40 transition-all duration-500 overflow-hidden"
+                                    style="height: 0;">
+                                    
+                                    <div id="dockContent" class="sm:w-1/3 lg:w-1/3 mx-auto bg-white p-3 rounded-t-lg shadow-inner">
+                                    <div class="space-y-4">
+
+                                        <!-- Overview -->
+                                        <div class="border-b pb-2">
+                                        <h3 class="text-base font-semibold text-gray-500">Overview</h3>
+                                        <div class="text-sm text-gray-500 space-y-1 mt-2">
+                                            <div class="flex justify-between"><span>Total Invested</span><span class="font-medium">$0.00</span></div>
+                                            <div class="flex justify-between"><span>Portfolio Value</span><span class="font-medium text-green-600">$0.00</span></div>
+                                            <div class="flex justify-between"><span>Overall ROI</span><span class="font-medium text-blue-600">0%</span></div>
+                                        </div>
+                                        </div>
+
+                                        <!-- Ad Performance -->
+                                        <div class="border-b pb-2">
+                                        <h3 class="text-base font-semibold text-gray-500">Ad Performance</h3>
+                                        <div class="text-sm text-gray-500 space-y-1 mt-2">
+                                            <div class="flex justify-between"><span>Impressions</span><span class="font-medium">0</span></div>
+                                            <div class="flex justify-between"><span>CTR</span><span class="font-medium">0%</span></div>
+                                            <div class="flex justify-between"><span>Ad Spend</span><span class="font-medium">$0.00</span></div>
+                                        </div>
+                                        </div>
+
+                                        <!-- Action Buttons -->
+                                        <div class="flex gap-2">
+                                        <button class="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
+                                            <i class="fas fa-wallet mr-1"></i> Add Funds
+                                        </button>
+                                        <button class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-2 px-3 rounded-lg transition-colors">
+                                            <i class="fas fa-exchange-alt mr-1"></i> Cash Out
+                                        </button>
+                                        </div>
+
+                                        <!-- Tip Section -->
+                                        <div id="tipContainerz"
+                                        class="text-sm text-gray-600 italic p-2 bg-gray-50 rounded-lg opacity-0 transition-opacity duration-500">
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <!-- ✅ Toggle Script + Tip Cycler -->
+                                <script>
+                                    const toggleBtn = document.getElementById('toggleDock');
+                                    const dock = document.getElementById('dock');
+                                    const overlay = document.getElementById('overlay');
+                                    const arrowIcon = document.getElementById('arrowIcon');
+                                    let isOpen = false;
+
+                                    toggleBtn.addEventListener('click', () => {
+                                    isOpen = !isOpen;
+
+                                    dock.style.height = isOpen ? 'auto' : '0';
+
+                                    toggleBtn.innerHTML = `
+                                        <i id="arrowIcon" class="fas ${isOpen ? 'fa-chevron-down' : 'fa-chevron-up'}"></i>
+                                        ${isOpen ? 'Close Panel' : 'Open Panel'}
+                                    `;
+
+                                    overlay.classList.toggle('opacity-0', !isOpen);
+                                    overlay.classList.toggle('opacity-100', isOpen);
+                                    overlay.classList.toggle('pointer-events-none', !isOpen);
+                                    });
+
+                                    overlay.addEventListener('click', () => {
+                                    isOpen = false;
+                                    dock.style.height = '0';
+                                    toggleBtn.innerHTML = `
+                                        <i id="arrowIcon" class="fas fa-chevron-up"></i>
+                                        Open Panel
+                                    `;
+                                    overlay.classList.add('opacity-0', 'pointer-events-none');
+                                    overlay.classList.remove('opacity-100');
+                                    });
+
+                                    // 🔁 Tips rotation
+                                    const tipsz = [
+                                    "💡 Tip: You earn more by holding premium product sets",
+                                    "📦 Product earnings release after 10–15 working days post-sale",
+                                    "🎯 Tip: Diversify your portfolio across different categories",
+                                    "💰 Higher tier products offer better profit margins",
+                                    "👌 Quick scaling: Reinvest profits into new product sets",
+                                    "😉 Regular portfolio updates increase earning potential"
+                                    ];
+                                    let currentTipIndexz = 0;
+                                    const tipContainerz = document.getElementById('tipContainerz');
+
+                                    function showNextTipz() {
+                                    tipContainerz.style.opacity = '0';
+                                    setTimeout(() => {
+                                        tipContainerz.textContent = tips[currentTipIndexz];
+                                        tipContainerz.style.opacity = '1';
+                                        currentTipIndexz = (currentTipIndexz + 1) % tips.length;
+                                    }, 500);
+                                    }
+
+                                    showNextTipz();
+                                    setInterval(showNextTipz, 20000);
+                                </script>
 
                             <!-- Settings and Currency Controls -->
                             <div class="fixed h-8 top-1 md:top-4 lg:top-4 right-4 flex space-x-2 lg:space-x-4">
