@@ -1225,7 +1225,7 @@
                                 const loginToken = localStorage.getItem('loginToken');
                                 localStorage.setItem('currency', currency);
                                 // Post to endpoint
-                                fetch('https://render-firebase-server.onrender.com/api/currency', {
+                                fetch('https://render-firebase-server.onrender.com/api/users/currency', {
                                 method: 'POST',
                                 headers: {
                                 'Authorization': `Bearer ${loginToken}`,
