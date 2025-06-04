@@ -1506,6 +1506,10 @@
                             </script>
 
                             <script>
+                                document.addEventListener('DOMContentLoaded', () => {
+                                    updateUi();
+                                });
+
                                 async function updateUi() {
                                 const loginToken = localStorage.getItem("loginToken");
                                 
@@ -1551,7 +1555,6 @@
                                 }
                             }                            
                             </script> 
-
         </div>
     </body>
 </html>
